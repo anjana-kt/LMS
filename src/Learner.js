@@ -8,7 +8,7 @@ const Learner = ()=>{
 
     return(
         <>
-            <h1>VWelcome</h1>
+            <h1>Welcome</h1>
         </>
     );
 }
