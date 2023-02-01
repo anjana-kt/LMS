@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import connectWallet from "./utils/Connect";
+import './styles/App.css'
 const Org = ()=>{
     
     useEffect(()=>{
