@@ -131,8 +131,8 @@ const Upload=() =>{
             console.log('Stored onChain '+k);
             //deployEncrypted(file);
           }}>UPLOAD</button>
-      <button className="upload" onClick={applyAccessConditions(document.getElementById('select'))}>
-
+      <button className="upload" name='Apply Access' onClick={applyAccessConditions(document.getElementById('select'))}>
+      Apply Access
       </button>
       <br/>
 

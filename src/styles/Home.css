@@ -2,7 +2,9 @@ body{
   background-color: #4E6975;
   text-align: center;
   color: white;
-  background-image:linear-gradient(rgb(123, 183, 233),rgb(123, 183, 233)) ;
+  background-image: url('/src/images/earth.jpg');
+  background-repeat: cover;
+  
   background-size: cover;
 }
 a:link{
@@ -10,10 +12,10 @@ a:link{
 }
 h1{
   font-size:calc(20px + 2vmin);
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 h2{
-  color: rgb(105, 12, 158);
+  color: rgb(224, 196, 240);
   font-size: calc(30px + 2vmin);;
 }
 
@@ -37,7 +39,7 @@ h2{
 }
 .SignIn-1{
   opacity: 1;
-  background-color: #81c405;
+  background-color: pink;
   padding: 6% 20% 8% 20%;
   font-size:calc(10px + 1vmin);
 }

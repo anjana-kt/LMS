@@ -41,7 +41,7 @@ export default function View(){
         const n = await lfgContract.getMaxCourseCount();
         console.log("Length = "+n);
         items=[]
-        for (var i=5;i<=n;i++)
+        for (var i=9;i<=n;i++)
         {
             const data = await lfgContract.getCourseDetailsFromID(i);
             var temp=data.cidRaw;
@@ -77,13 +77,10 @@ export default function View(){
                 </video>
                 <div className='Caption'>
                 <p> {`${item.title}`}</p><br/>
-                {/* <p>{`${item.topic}`}</p><br/>
-                <p>{`${item.dur}`}</p><br/> */}
                
                 </div>
                
             </div>
-
                 )}
         </div>
         </div>
