@@ -5,7 +5,7 @@ import lfg from './contractsABI/lfg_abi.json'
 
 const Upload=() =>{
     var cid;
-    const lfgContractAddress='0x7A4582Ac33A4fe7eF46C096528FF0Fa65F01bCF3'
+    const lfgContractAddress='0x2B341C44ACB4Aae62E868b9c1538be02D99eab28'
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner();
     const lfgContract = new ethers.Contract(lfgContractAddress,lfg.lfgABI,signer);
@@ -67,22 +67,32 @@ const Upload=() =>{
         progressCallback
       );
       console.log(response);
-      cid = response.data.cid;
 
-      applyAccessConditions();
+      //applyAccessConditions();
     }
 
+    String.prototype.hexEncode = function(){
+      var hex, i;
+  
+      var result = "";
+      for (i=0; i<this.length; i++) {
+          hex = this.charCodeAt(i).toString(16);
+          result += (hex).slice(-4);
+      }
+  
+      return result
+  }
+
   // Code to store on chain  
-  const store =(size,title,dur,topic)=>{
+  const store =async(size,title,dur,topic)=>{
 
-    cid='QmcR6tvw2nXnirfb1s5A8n7x4eau4irfMbkZySEem8uG59'
-    const encoder = new TextEncoder('UTF-8');
-
-    var c = encoder.encode(cid);
-    var b = c.join('');
-    c = '0x'.concat(b);
-    var d=parseInt(dur);
-    lfgContract.uploadCourse(c ,size, title, d, topic)
+    cid='QmZ5u4fifk1NZhW2YijBMw6kyJmYcLc9hfe2pRnsCXFYAF'
+    var d= parseInt(dur)
+    var b = cid.hexEncode()
+    var c = '0x'.concat(b)
+    console.log("Passing byte value is : "+c);
+    var k=await lfgContract.uploadCourse(c ,size, title, d, topic);
+    console.log(k);
   }
 
   return (
@@ -109,7 +119,7 @@ const Upload=() =>{
       <br/>
 
       <label for="select">Select a File : </label>
-      <input type="file" id="select" name="upload"/>
+      <input type="file" id="select" name="select"/>
       <br/>
       <button className="upload" onClick={async()=>{
             var file=document.getElementById("select").value;
@@ -119,8 +129,11 @@ const Upload=() =>{
             var size = document.getElementById("size").value;
             var k = store(parseInt(size),title,dur,topic);
             console.log('Stored onChain '+k);
-            deployEncrypted(file);
+            //deployEncrypted(file);
           }}>UPLOAD</button>
+      <button className="upload" onClick={applyAccessConditions(document.getElementById('select'))}>
+
+      </button>
       <br/>
 
     </div>

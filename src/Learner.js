@@ -10,7 +10,7 @@ const Learner = ()=>{
 
     return(
         <div className="Learner">
-            <h1>Welcome</h1>
+            <h1>Browse Courses</h1>
             {view()}
         </div>
     );
