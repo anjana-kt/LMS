@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import connectWallet from "./utils/Connect";
+import Upload from "./Upload";
 import './styles/App.css'
+
 const Org = ()=>{
     
     useEffect(()=>{
@@ -10,6 +12,8 @@ const Org = ()=>{
     return(
         <>
             <h1>Welcome</h1>
+
+            {Upload()}
         </>
     );
 }

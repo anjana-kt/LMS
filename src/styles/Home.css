@@ -3,9 +3,6 @@ body{
   text-align: center;
   color: white;
 }
-img{
-  
-}
 a:link{
   text-decoration: none;
 }
@@ -41,6 +38,51 @@ h1{
 }
 .Learner{
   background-image: none;
+}
+.View{
+  align-items: center;
+  display: contents;
+  align-content: center;
+}
+.Vdo-box{
+    text-align: center;
+    background-color: #282c34;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    color: pink;
+    max-width: 95%;
+    justify-items: left;
+  }
+
+.Vdo-Card{
+  background-color: rgb(236, 255, 249);
+  color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  margin: 5%;
+  border-radius: 4% 4% 4% 4%;
+  max-width: 100%;
+  max-height: 400px;
+  padding: 10% 30% 0 30%;
+  flex: 25%;
+}
+.Vdo-Image{
+  max-width: 100%;
+  max-height: inherit;
+}
+
+.Vdo-Card:hover .Vdo-Image{
+  -webkit-filter: drop-shadow(0 0 2px black);
+  filter: drop-shadow(0 0 4px black);
+}
+
+.Vdo-Card:hover{
+  background-color: rgb(241, 213, 178);
+  font-weight:normal; 
+  text-shadow: 1px 1px;
 }
 
 @keyframes App-logo-spin {
