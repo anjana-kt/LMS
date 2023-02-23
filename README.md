@@ -2,7 +2,7 @@
 
 Open Knowledge is a Decentralized LMS powered by Lighthouse, Filecoin and FVM.
 
-#Description
+# Description
 
 Are you a protocol looking to host your content?
 Are you a developer looking to find meaningful and structured content in the web3 space?
@@ -20,7 +20,7 @@ The FE interacts with storage and the blockchain to store and retrieve content. 
 
 # Video
 
-[![Demo Video]](https://www.loom.com/share/35e7453e9b5e48fa889f67b6bb4c5250)
+[Demo Video by](https://www.loom.com/share/35e7453e9b5e48fa889f67b6bb4c5250) [@gyan0890](http://github.com/gyan0890)
 
 
 
