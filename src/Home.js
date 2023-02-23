@@ -11,9 +11,7 @@ function Home() {
   const tag ="Learn, \n Have fun \n and Grow"
   const navigate = useNavigate();
   return (
-    <div className="Home">
-
-      
+    <div className="Home">   
       <h2>{tag}</h2>
       
       {/* <h1>Join Us</h1> */}

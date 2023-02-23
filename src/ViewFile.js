@@ -1,4 +1,3 @@
-import lighthouse from '@lighthouse-web3/sdk';
 import {ethers} from 'ethers'
 import lfg from './contractsABI/lfg_abi.json'
 import pic from './images/vdo.png'
