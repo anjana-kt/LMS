@@ -1,5 +1,4 @@
 import lighthouse from '@lighthouse-web3/sdk';
-import LKEY from '../key.json'
 
 const Upload=() =>{
 
@@ -12,7 +11,7 @@ const Upload=() =>{
   const deploy = async(e) =>{
     // Push file to lighthouse node
     // Both file and folder supported by upload function
-    const output = await lighthouse.upload(e, LKEY.lightHouseKey, progressCallback);
+    const output = await lighthouse.upload(e, "cb65e083-0f95-4c59-8fff-10cc2cd16e7f", progressCallback);
     console.log('File Status:', output);
     /*
       output:

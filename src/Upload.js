@@ -62,7 +62,7 @@ const Upload=() =>{
       const response = await lighthouse.uploadEncrypted(
         e,
         sig.publicKey,
-        LKEY.lightHouseKey,
+        "cb65e083-0f95-4c59-8fff-10cc2cd16e7f",
         sig.signedMessage,
         progressCallback
       );

@@ -1,7 +1,7 @@
 import React from "react";
 import { ethers } from 'ethers';
 import lighthouse from '@lighthouse-web3/sdk';
-import LKEY from '../key.json'
+import LKEY from './key.json'
 
 function Eupload() {
 
@@ -37,7 +37,7 @@ function Eupload() {
     const response = await lighthouse.uploadEncrypted(
       e,
       sig.publicKey,
-      LKEY.lightHouseKey,
+      "cb65e083-0f95-4c59-8fff-10cc2cd16e7f",
       sig.signedMessage,
       progressCallback
     );
