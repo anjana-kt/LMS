@@ -11,7 +11,7 @@ const Org = ()=>{
 
     return(
         <>
-            <h1>Uload A Video</h1>
+            <h1>Upload A Video</h1>
             {Upload()}
         </>
     );

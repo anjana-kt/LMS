@@ -1,7 +1,7 @@
 import lighthouse from '@lighthouse-web3/sdk';
 import {ethers} from 'ethers'
-import { toUtf8Bytes } from 'ethers/lib/utils';
 import lfg from './contractsABI/lfg_abi.json'
+import LKEY from './key.json'
 
 const Upload=() =>{
     var cid;
@@ -62,7 +62,7 @@ const Upload=() =>{
       const response = await lighthouse.uploadEncrypted(
         e,
         sig.publicKey,
-        "cb65e083-0f95-4c59-8fff-10cc2cd16e7f",
+        LKEY.lightHouseKey,
         sig.signedMessage,
         progressCallback
       );
